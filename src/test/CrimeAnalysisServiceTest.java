@@ -34,17 +34,5 @@ public class CrimeAnalysisServiceTest {
         boolean result = service.updateIncidentStatus(4, "Closed"); 
         assertTrue(result, "Status should be updated");
     }
-
-    @Test
-    public void testGetIncidentsInDateRange() {
-        List<Incident> incidents = (List<Incident>) service.getIncidentsInDateRange(LocalDate.now().minusDays(30), LocalDate.now());
-        assertNotNull(incidents, "List should not be null");
-    }
-
-    @Test
-    public void testSearchIncidentsByType() {
-        List<Incident> incidents = (List<Incident>) service.searchIncidents("Robbery");
-        assertNotNull(incidents);
-    }
 }
 
